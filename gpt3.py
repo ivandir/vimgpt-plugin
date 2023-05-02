@@ -11,7 +11,7 @@ def query_gpt3(prompt):
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=prompt,
-        max_tokens=512,
+        max_tokens=2048,
         n=1,
         stop=None,
         temperature=0.7,
