@@ -1,6 +1,6 @@
 function! CallGPT3(prompt)
   let l:escaped_prompt = shellescape(a:prompt)
-  let l:response = system("python gpt3.py " . l:escaped_prompt)
+  let l:response = system("python ~/.vim/vimgpt-plugin/gpt3.py " . l:escaped_prompt)
 
   if v:shell_error != 0
     echohl ErrorMsg
