@@ -4,7 +4,7 @@ function! CallGPT4(prompt)
 
   if v:shell_error != 0
     echohl ErrorMsg
-    echo "Error calling GPT-3:"
+    echo "Error calling GPT-4:"
     echo l:response
     echohl None
     return
