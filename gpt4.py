@@ -7,9 +7,9 @@ openai.api_key = os.environ.get("OPENAI_API_KEY")
 if not openai.api_key:
     raise ValueError("Please set the OPENAI_API_KEY environment variable.")
 
-def query_gpt35_turbo(prompt):
+def query_gpt4(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=[
             {"role": "user", "content": "Code only: " + prompt}
         ],
@@ -23,5 +23,5 @@ def query_gpt35_turbo(prompt):
 
 if __name__ == "__main__":
     prompt = sys.argv[1]
-    result = query_gpt35_turbo(prompt)
+    result = query_gpt4(prompt)
     print(result)
